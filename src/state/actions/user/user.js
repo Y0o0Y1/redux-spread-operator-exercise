@@ -7,7 +7,7 @@ import {
     ADD_SKILL,
     UPDATE_SKILLS,
     UPDATE_IDENTITY
-} from "../types";
+} from "./types";
 
 
 export const fetchProfile = (data) => (dispatch) => {

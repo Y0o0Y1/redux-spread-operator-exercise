@@ -7,27 +7,15 @@ import {
     ADD_SKILL,
     UPDATE_SKILLS,
     UPDATE_IDENTITY
-} from "../types";
+} from "../../actions/user/types";
 
-let initialState = {
-    user: {
-        first_name: null,
-        last_name: null,
-        hobbies: [],
-        skills: [],
-        identity: {
-            height: null,
-            weight: null,
-            skin_colour: null
-        }
-    }
-}
+let initialState = null;
 
 export const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_PROFILE: {
             console.log("Fetching", action.payload)
-            return { ...state, user: action.payload }
+            return { ...state, ...action.payload }
         }
         case UPDATE_FIRST_NAME: {
             return { ...state, user: { ...state.user, "first_name": action.payload } }

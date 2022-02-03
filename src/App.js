@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { fetchProfile, updateFirstName, updateLastName, addHobby, updateHobbies, addSkill, updateSkills, updateIdentity } from './state/actions/User';
+import { fetchProfile, updateFirstName, updateLastName, addHobby, updateHobbies, addSkill, updateSkills, updateIdentity } from './state/actions/user/user';
 import { useDispatch } from 'react-redux';
 import { user1, newHobbies, newSkills } from './constants/userData';
 function App() {
