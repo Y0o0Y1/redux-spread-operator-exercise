@@ -18,25 +18,26 @@ export const userReducer = (state = initialState, action) => {
             return { ...state, ...action.payload }
         }
         case UPDATE_FIRST_NAME: {
-            return { ...state, user: { ...state.user, "first_name": action.payload } }
+            return { ...state, first_name: action.payload }
         }
         case UPDATE_LAST_NAME: {
-            return { ...state, user: { ...state.user, "last_name": action.payload } }
+            return { ...state, last_name: action.payload }
+
         }
         case ADD_HOBBY: {
-            return { ...state, user: { ...state.user, "hobbies": [...state.user.hobbies, action.payload] } }
+            return { ...state, hobbies: [...state.hobbies, action.payload] }
         }
         case UPDATE_HOBBIES: {
-            return { ...state, user: { ...state.user, "hobbies": action.payload } }
+            return { ...state, hobbies: action.payload }
         }
         case ADD_SKILL: {
-            return { ...state, user: { ...state.user, "skills": [...state.user.skills, action.payload] } }
+            return { ...state, skills: [...state.skills, action.payload] }
         }
         case UPDATE_SKILLS: {
-            return { ...state, user: { ...state.user, "skills": action.payload } }
+            return { ...state, skills: action.payload }
         }
         case UPDATE_IDENTITY: {
-            return { ...state, user: { ...state.user, "identity": { ...state.user.identity, ...action.payload } } }
+            return { ...state, identity: { ...state.identity, ...action.payload } }
         }
         default:
             return state
